@@ -1,0 +1,55 @@
+// ==========================================
+// LOP XE - LOP TRUU TUONG
+// ==========================================
+class Xe {
+protected:
+    string maXe;
+    string tenXe;
+    string mauSac;
+    double giaBan;
+
+public:
+    // Constructor
+    Xe(string ma, string ten, string mau, double gia) {
+        maXe = ma;
+        tenXe = ten;
+        mauSac = mau;
+        giaBan = gia;
+    }
+
+    // Destructor ao
+    virtual ~Xe() {}
+
+    // Getter
+    string getMaXe() {
+        return maXe;
+    }
+
+    string getTenXe() {
+        return tenXe;
+    }
+
+    string getMauSac() {
+        return mauSac;
+    }
+
+    double getGiaBan() {
+        return giaBan;
+    }
+
+    // Setter
+    void setMauSac(string mau) {
+        mauSac = mau;
+    }
+
+    void setGiaBan(double gia) {
+        if(gia > 0)
+            giaBan = gia;
+    }
+
+    // Ham thuan ao
+    virtual void hienThi() = 0;
+    virtual void khoiDong() = 0;
+    virtual void diChuyen(double km) = 0;
+    virtual void sacPin(double pin) = 0;
+};
