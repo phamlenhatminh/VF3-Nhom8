@@ -1,0 +1,51 @@
+// ==========================================
+// LOP VF3 - KE THUA LOP XE DIEN
+// ==========================================
+class VF3 : public XeDien {
+private:
+    int soChoNgoi;
+    string hangSanXuat;
+
+public:
+    // Constructor
+    VF3(string ma, string mau, double gia)
+        : XeDien(ma, "VinFast VF3", mau, gia, 18.64) {
+        soChoNgoi = 4;
+        hangSanXuat = "VinFast";
+    }
+
+    // Destructor
+    ~VF3() override {}
+
+    // Getter
+    int getSoChoNgoi() {
+        return soChoNgoi;
+    }
+
+    string getHangSanXuat() {
+        return hangSanXuat;
+    }
+
+    // Hien thi thong tin VF3
+    void hienThi() override {
+        cout << "\n========== THONG TIN VF3 ==========";
+
+        XeDien::hienThi();
+
+        cout << "\nHang san xuat: " << hangSanXuat;
+        cout << "\nSo cho ngoi: " << soChoNgoi;
+        cout << "\n===================================" << endl;
+    }
+
+    // Khoi dong
+    void khoiDong() override {
+        cout << "VinFast VF3 dang khoi dong..." << endl;
+        XeDien::khoiDong();
+    }
+
+    // Di chuyen
+    void diChuyen(double km) override {
+        cout << "Mo phong VinFast VF3 di chuyen..." << endl;
+        XeDien::diChuyen(km);
+    }
+};
